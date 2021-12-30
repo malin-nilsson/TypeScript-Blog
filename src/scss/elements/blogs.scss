@@ -1,0 +1,68 @@
+@use '../mixins';
+
+.blogs {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0px;
+    gap: 20px;
+
+    @include mixins.tablet-only {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        padding: 100px 0px;
+    }
+
+    @include mixins.desktop-only {
+        width: 80%;
+        margin: 0 auto;
+        padding: 100px 0px;
+        flex-direction: row;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 189, 189, 0.4);
+    width: 95%;
+    height: auto;
+    padding: 50px 20px;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: rgb(189, 189, 189, 0.3);
+        cursor: pointer;
+    }
+
+    @include mixins.tablet-only {
+        width: 35%;
+        height: 250px;
+    }
+
+    @include mixins.desktop-only {
+        width: 25%;
+        height: 250px;
+    }
+  
+}
+
+.blog {
+ font-size: 2rem;
+ font-weight: 500;
+}
+
+.author-name {
+    text-align: center;
+    font-size: 1.2rem;
+}

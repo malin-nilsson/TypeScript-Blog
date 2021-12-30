@@ -1,5 +1,9 @@
 @use '../mixins';
 
+
+main {
+    height: 80vh;
+}
 .wrapper {
     display: flex;
     flex-direction: column;
