@@ -1,0 +1,17 @@
+@use 'elements/navigation';
+@use 'elements/footer';
+@use 'elements/content';
+@use 'mixins';
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 14pt;
+    height: 100%;
+}
