@@ -19,6 +19,10 @@ background-color: #fff;
 .nav-item {
     font-size: 1.5rem;
 
+    &:hover {
+        text-decoration: underline;
+    }
+
     @include mixins.desktop-only {
         padding: 0px 10px;
     } 
