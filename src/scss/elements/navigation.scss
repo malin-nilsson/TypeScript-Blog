@@ -1,1 +1,29 @@
 @use '../mixins';
+
+.navbar-brand {
+    font-size: 2rem;
+    padding: 0px 10px;
+    font-weight: 700;
+
+    @include mixins.desktop-only {
+        font-size: 3rem;
+        padding: 0px 30px;
+    }
+}
+
+.navbar-nav {
+padding: 20px 10px;
+background-color: #fff;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+
+    @include mixins.desktop-only {
+        padding: 0px 10px;
+    } 
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
