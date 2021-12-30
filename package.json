@@ -1,0 +1,23 @@
+{
+  "name": "blog-cms",
+  "version": "1.0.0",
+  "description": "Blog CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malin-nilsson/blog-cms.git"
+  },
+  "author": "Malin Nilsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malin-nilsson/blog-cms/issues"
+  },
+  "homepage": "https://github.com/malin-nilsson/blog-cms#readme",
+  "dependencies": {
+    "parcel": "^2.0.1"
+  }
+}
