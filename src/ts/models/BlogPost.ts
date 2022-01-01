@@ -2,22 +2,23 @@ import {
     Blog
 } from "./Blog";
 
-export class BlogPost extends Blog {
+export class BlogPost {
     title: string;
     content: string;
-    blogid: number;
+    blogPostID: number;
+    blog: string;
 
     constructor(
-        name: string,
-        id: number,
-        author: string,
         title: string,
         content: string,
-        blogid: number,
+        blogPostID: number,
+        blog: string,
     ) {
-        super(name, id, author);
         this.title = title;
         this.content = content;
-        this.blogid = blogid;
+        this.blogPostID = blogPostID;
+        this.blog = blog;
     }
 }
+
+export const BlogPosts: BlogPost[] = [];

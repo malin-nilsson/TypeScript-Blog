@@ -1,56 +1,87 @@
 @use '../mixins';
 
 .new-post-container {
-    padding: 50px 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @include mixins.desktop-only {
-        width: 90%;
-        margin: 0 auto;
-        padding: 50px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
     }
 
-    .new-post input,
-    .new-post textarea {
-        display: block;
-        margin: 5px 0px;
+    .new-post {
         width: 100%;
-        border-radius: 10px;
-        border: 1px solid grey;
 
-    }
-
-
-    #title {
+        @include mixins.tablet-only {
+            width: 75%;
+     
+         }
         @include mixins.desktop-only {
-            height: 50px;
-            font-size: 2rem;
-           
+           width: 45%;
+    
         }
     }
 
- 
+    input {
+        margin: 5px 0px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        width: 100%;
+        height: 40px;
+
+        &:focus {
+            outline: none;
+        }
+
+        @include mixins.desktop-only {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.3rem;
+        }
+    }
+
     textarea {
+        display: block;
+        margin: 5px 0px;
+        border-radius: 5px;
+        border: 1px solid grey;
         resize: none;
-        height: 20rem;
+        height: 18rem;
+        width: 100%;
         padding: 5px;
+
+        &:focus {
+            outline: none;
+        }
 
         @include mixins.desktop-only {
             padding: 10px;
-            height: 20rem;
+            height: 18rem;
             width: 100%;
-            font-size: 1.6rem;
-            
+            font-size: 1.3rem;
+
         }
+
     }
 }
 
 label {
+    display: block;
 
     @include mixins.desktop-only {
-        font-size: 3rem;
+        font-size: 1.9rem;
     }
 
+}
+
+select {
+    margin: 10px 0px;
 }
 
 button {
@@ -61,4 +92,11 @@ button {
     background-color: #000;
     color: #fff;
     font-weight: 500;
+    border: 2px solid #000;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
 }

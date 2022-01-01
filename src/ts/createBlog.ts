@@ -16,6 +16,6 @@ export function createBlog() {
     let authorValue = author.value;
     let id: number = Math.floor(Math.random() * 1000);
     blogList.push(new Blog(blogNameValue, id, authorValue));
-    console.log(blogList);
     localStorage.setItem("Blogs", JSON.stringify(blogList));
+    location.href = "pages/blogs.html";
 }

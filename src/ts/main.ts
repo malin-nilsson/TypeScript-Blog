@@ -15,6 +15,7 @@ import {
 } from "./createBlog";
 
 export let blogList: Blog[] = JSON.parse(localStorage.getItem("Blogs")) || [];
+export let blogPosts: BlogPost[] = JSON.parse(localStorage.getItem("Blog posts")) || [];
 
 
 window.onload = function () {
