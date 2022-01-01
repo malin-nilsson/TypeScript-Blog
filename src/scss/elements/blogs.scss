@@ -29,7 +29,7 @@
     }
 }
 
-.blog-container {
+.blog {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +57,7 @@
   
 }
 
-.blog {
+.blog-name {
  font-size: 2rem;
  font-weight: 500;
 }
@@ -66,3 +66,22 @@
     text-align: center;
     font-size: 1.2rem;
 }
+
+.blog-container {
+    @include mixins.desktop-only {
+        width: 70%;
+    }
+
+    h1 {
+        @include mixins.desktop-only {
+            font-size: 2rem;
+        }
+    }
+
+    h2 {
+        @include mixins.desktop-only {
+            font-style: italic;
+        }
+    }
+}
+
