@@ -5,7 +5,7 @@ export function validateForms() {
     // Loop over them and prevent submission
     Array.prototype.slice.call(forms).forEach(function (form) {
         form.addEventListener(
-            "submit",
+            "click",
             function (event) {
                 if (!form.checkValidity()) {
                     event.preventDefault();

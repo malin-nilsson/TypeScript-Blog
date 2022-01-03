@@ -3,6 +3,7 @@
 @use 'elements/content';
 @use 'elements/blogs';
 @use 'elements/blogpost-form';
+@use 'elements/modal';
 @use 'mixins';
 
 * {
@@ -18,4 +19,10 @@ body {
     height: 100%;
     background-color: rgb(254, 254, 254);
 
+    @include mixins.tablet-only {
+      height: 100vh;
+   }
+    @include mixins.desktop-only {
+     height: 100vh;
+  }
   }

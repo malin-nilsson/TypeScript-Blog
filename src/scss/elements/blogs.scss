@@ -1,5 +1,7 @@
 @use '../mixins';
 
+
+
 .blogs {
     width: 90%;
     margin: 0 auto;
@@ -70,9 +72,14 @@
 .blog-container {
     width: 100%;
     padding: 40px 20px;
+    height: 100vh;
+
+    @include mixins.tablet-only {
+        height: 100vh;
+    }
 
     @include mixins.desktop-only {
-        height: 100%;
+        height: 100vh;
         width: 70%;
         margin: 0 auto;
         padding: 60px 0px;

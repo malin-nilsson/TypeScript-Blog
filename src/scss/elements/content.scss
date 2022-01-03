@@ -49,6 +49,7 @@
 
             @include mixins.desktop-only {
                 padding: 7px;
+                font-size: 1.5rem;
             }
         }
     }
@@ -69,10 +70,10 @@
         font-weight: 500;
         border: 2px solid #000;
         transition: 0.2s;
-    
+
         &:hover {
             background-color: #fff;
             color: #000;
         }
-}
+    }
 }
