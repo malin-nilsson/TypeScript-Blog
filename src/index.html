@@ -43,12 +43,14 @@
     <main>
         <div class="wrapper">
             <h1>Create your own blog</h1>
-            <form>
+            <form class="needs-validation" novalidate>
                 <label for="blog-name">Blog Name:</label>
-                <input type="text" id="blog-name">
+                <input type="text" id="blog-name" required>
+                <div class="invalid-feedback">Please provide a name for your blog.</div>
                 <label for="author">Author:</label>
-                <input type="text" id="author">
-                <button type="button" id="new-blog">Create blog</button>
+                <input type="text" id="author" required>
+                <div class="invalid-feedback">Please provide a name.</div>
+                <button class="button needs-validation" id="new-blog">Create blog</button>
             </form>
         </div>
 

@@ -1,4 +1,7 @@
 import {
+    validateForms
+} from "./formValidation";
+import {
     blogList
 } from "./main";
 import {
@@ -15,7 +18,11 @@ export function createBlog() {
     let author: HTMLInputElement = document.getElementById("author") as HTMLInputElement;
     let authorValue = author.value;
     let id: number = Math.floor(Math.random() * 1000);
-    blogList.push(new Blog(blogNameValue, id, authorValue));
-    localStorage.setItem("Blogs", JSON.stringify(blogList));
-    location.href = "pages/blogs.html";
+   
+    if (blogNameValue || authorValue) {
+        blogList.push(new Blog(blogNameValue, id, authorValue));
+        localStorage.setItem("Blogs", JSON.stringify(blogList));
+
+    }
 }
+
