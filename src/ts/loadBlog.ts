@@ -1,40 +1,70 @@
-import { blogList } from "./main";
+import {
+    blogList,
+    blogPosts
+} from "./main";
+import {
+    Blog
+} from "./models/Blog";
+import {
+    BlogPost
+} from "./models/BlogPost";
 
+let url: string = window.location.search;
+let urlParams: URLSearchParams = new URLSearchParams(url);
 
-window.onload = function() {
-    let url: string = window.location.search;
-    let urlParams: URLSearchParams = new URLSearchParams(url);
+for (let value of urlParams.values()) {
+    let idfromURL: string = value;
 
-    for (let value of urlParams.values()) {
-        let idfromURL: string = value;
+    // Look through the product catalog for the ID and compare it to ID in URL
+    for (let i: number = 0; i < blogList.length; i++) {
+        let idFromObject: string = blogList[i].id.toString();
 
-        // Look through the product catalog for the ID and compare it to ID in URL
-        for (let i: number = 0; i < blogList.length; i++) {
-            let idFromObject: string = blogList[i].id.toString();
-
-            if (idFromObject === idfromURL) {
-                loadClickedBlog(blogList[i])
-            }
+        if (idFromObject === idfromURL) {
+            loadClickedBlog(blogList[i]);
+            loadBlogPosts(blogList[i]);
         }
     }
 }
 
-let blogs: HTMLDivElement = document.querySelector(".blogs");
 
 function loadClickedBlog(clickedBlog) {
-    blogs.innerHTML = "";
-
+    let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
     let blog: HTMLDivElement = document.createElement("div");
-    let title: HTMLHeadingElement = document.createElement("h1");
-    let author: HTMLHeadingElement = document.createElement("h2");
+    let blogName: HTMLHeadingElement = document.createElement("h1");
+    let smallHeading: HTMLHeadingElement = document.createElement("h2");
 
-    blogs.appendChild(blog);
-    blog.appendChild(title);
-    blog.appendChild(author);
+    blogContainer.appendChild(blog);
+    blog.appendChild(blogName);
+    blog.appendChild(smallHeading);
 
-    for (let i = 0; i < blogList.length; i++) {
-        title.innerHTML = blogList[i].name;
-        author.innerHTML = blogList[i].author;
+    smallHeading.innerHTML = "Blog Posts:"
+    blogName.innerHTML = clickedBlog.name;
+
+}
+
+function loadBlogPosts(clickedBlog: Blog) {
+    let nameFromBlogPost: string = clickedBlog.name;
+
+    for (let i = 0; i < blogPosts.length; i++) {
+        let nameFromBlog: string = blogPosts[i].blog;
+
+        if (nameFromBlog === nameFromBlogPost) {
+            let smallHeading: HTMLHeadingElement = document.querySelector("h2");
+            let blogPostTitle: HTMLParagraphElement = document.createElement("p");
+           
+            blogPostTitle.classList.add("blogpost-title");
+            blogPostTitle.innerHTML = blogPosts[i].title;
+        
+            smallHeading.after(blogPostTitle);
+           
+        } else if (blogPosts[i].content === "") {
+            let smallHeading: HTMLHeadingElement = document.querySelector("h2");
+            let placeholder: HTMLParagraphElement = document.createElement("p");
+         
+            placeholder.innerHTML = "Nothing has been published here yet!";
+
+            smallHeading.after(placeholder);
+
+        }
     }
-
 }

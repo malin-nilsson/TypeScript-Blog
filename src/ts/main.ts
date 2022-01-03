@@ -20,9 +20,7 @@ export let blogPosts: BlogPost[] = JSON.parse(localStorage.getItem("Blog posts")
 
 window.onload = function () {
     let button: HTMLButtonElement = document.getElementById("new-blog") as HTMLButtonElement;
-    button.addEventListener("click", () => {
-        createBlog()
-    })
+    button.addEventListener("click", createBlog)
 }
 
 

@@ -13,13 +13,11 @@ window.onload = function () {
     showBlogsInForm()
     let button: HTMLButtonElement = document.getElementById("new-post") as HTMLButtonElement;
     button.addEventListener("click", createBlogPost)
+
+  
 }
 
-let title: HTMLInputElement = document.getElementById("title") as HTMLInputElement;
-let titleValue = title.value;
-let content: HTMLTextAreaElement = document.getElementById("content") as HTMLTextAreaElement;
-let contentValue = content.value;
-let blogid: number = Math.floor(Math.random() * 1000);
+
 
 function showBlogsInForm() {
     let dropdown: HTMLSelectElement = document.getElementById("select-blog") as HTMLSelectElement;
@@ -32,6 +30,11 @@ function showBlogsInForm() {
 }
 
 function createBlogPost() {
+    let title: HTMLInputElement = document.getElementById("title") as HTMLInputElement;
+    let titleValue = title.value;
+    let content: HTMLTextAreaElement = document.getElementById("content") as HTMLTextAreaElement;
+    let contentValue = content.value;
+    let blogid: number = Math.floor(Math.random() * 1000);
     let blogName: HTMLSelectElement = document.getElementById("select-blog") as HTMLSelectElement;
     let blogNameValue = blogName.selectedOptions[0].value;
     blogPosts.push(new BlogPost(titleValue, contentValue, blogid, blogNameValue));

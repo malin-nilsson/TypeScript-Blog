@@ -54,12 +54,12 @@
         width: 25%;
         height: 250px;
     }
-  
+
 }
 
 .blog-name {
- font-size: 2rem;
- font-weight: 500;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .author-name {
@@ -68,20 +68,58 @@
 }
 
 .blog-container {
+    width: 100%;
+    padding: 40px 20px;
+
     @include mixins.desktop-only {
+        height: 100%;
         width: 70%;
+        margin: 0 auto;
+        padding: 60px 0px;
     }
 
     h1 {
+        font-size: 2.7rem;
+        font-weight: 500;
+        border-bottom: 2px solid rgb(16, 16, 16);
+
         @include mixins.desktop-only {
-            font-size: 2rem;
+            font-size: 4rem;
+            margin: 0px 0px 10px;
+            padding: 10px 0px;
         }
     }
 
     h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 20px 0px 40px;
+        color: rgb(125, 125, 125);
+        font-style: oblique;
+
         @include mixins.desktop-only {
-            font-style: italic;
+            font-size: 1.8rem;
+            margin: 40px 0px;
+
+
+        }
+    }
+
+    .blogpost-title {
+        font-size: 1.5rem;
+        font-weight: 400;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(196, 196, 196);
+
+        &:hover {
+            background-color: rgba(235, 235, 235, 0.4);
+        }
+
+        @include mixins.desktop-only {
+            font-weight: 500;
+            font-size: 1.5rem;
+            padding: 10px 0px;
+           
         }
     }
 }
-

@@ -20,6 +20,7 @@ function loadBlogs() {
         blogName.classList.add("blog-name");
         authorName.classList.add("author-name");
 
+     
         blogName.innerHTML = blogList[i].name;
         authorName.innerHTML = "Created by: " + blogList[i].author;
 
@@ -29,8 +30,6 @@ function loadBlogs() {
 
         blogContainer.addEventListener("click", () => {
             location.href = "blog.html?id=" + blogList[i].id;
-            console.log("det händer något")
         })
-
     }
 }
