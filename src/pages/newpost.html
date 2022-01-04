@@ -43,6 +43,20 @@
 
     <main>
         <div class="new-post-container">
+             <!-- The Modal -->
+             <div id="modal" class="modal-container">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="close-wrapper">
+                        <span class="bi-x close"></span>
+                    </div>
+                    <p>Your post has been published!</p>
+                    <div class="modal-buttons">
+                        <a class="btn-see-blogs" href="blogs.html">Go to your blog</button>
+                    </div>
+                </div>
+            </div>
+
             <form class="new-post needs-validation" novalidate>
                 <label for="title">Blog:</label>
                 <select name="select-blog" id="select-blog" required>
@@ -55,7 +69,7 @@
                 <label for="content">Content:</label>
                 <textarea name="content" form="new-post" id="content" required></textarea>
                 <div class="invalid-feedback">You forgot to write something!</div>
-                <button class="needs-validation" type="submit" id="new-post">Publish</button>
+                <button class="needs-validation" type="button" id="new-post">Publish</button>
             </form>
         </div>
     </main>
