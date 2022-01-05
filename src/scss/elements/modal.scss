@@ -38,10 +38,23 @@
     }
 
     @include mixins.desktop-only {
-      padding: 60px;
+      padding: 50px;
       width: 50%;
       margin: 8% auto;
     }
+
+    .close-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+ 
+    }
+
+    svg {
+      cursor: pointer;
+    }
+
+  
 
     p {
       display: flex;
@@ -103,28 +116,10 @@
       @include mixins.desktop-only {
         gap: 30px;
       }
-
-      .close-wrapper {
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      .bi-x {
-        color: white;
-        text-align: right;
-        font-size: 2.4rem;
-        opacity: 1;
-      }
-
-      .bi-x:hover,
-      .bi-x:focus {
-        text-decoration: none;
-        cursor: pointer;
-        opacity: 1;
-      }
+    }
     }
   }
-}
+
 
 // Animation 
 @-webkit-keyframes animatemodal {

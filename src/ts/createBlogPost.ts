@@ -23,14 +23,12 @@ window.onclick = function (event) {
     }
 }
 
+
 window.onload = function () {
     showBlogsInForm()
-    validateForms();
-
     let button: HTMLButtonElement = document.getElementById("new-post") as HTMLButtonElement;
-    button.addEventListener("click", createBlogPost)
+    button.addEventListener("click", createBlogPost);
 }
-
 
 
 function showBlogsInForm() {
@@ -44,6 +42,7 @@ function showBlogsInForm() {
 }
 
 function createBlogPost() {
+    validateForms();
     let title: HTMLInputElement = document.getElementById("title") as HTMLInputElement;
     let titleValue = title.value;
     let content: HTMLTextAreaElement = document.getElementById("content") as HTMLTextAreaElement;
@@ -52,7 +51,7 @@ function createBlogPost() {
     let blogName: HTMLSelectElement = document.getElementById("select-blog") as HTMLSelectElement;
     let blogNameValue = blogName.selectedOptions[0].value;
 
-    if (titleValue || contentValue || blogNameValue) {
+    if (titleValue && contentValue && blogNameValue) {
         blogPosts.push(new BlogPost(titleValue, contentValue, blogid, blogNameValue));
         localStorage.setItem("Blog posts", JSON.stringify(blogPosts));
         modal.style.display = "block";

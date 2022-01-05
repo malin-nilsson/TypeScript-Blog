@@ -26,7 +26,6 @@ for (let value of urlParams.values()) {
     }
 }
 
-
 function loadClickedBlog(clickedBlog) {
     let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
     let blog: HTMLDivElement = document.createElement("div");
@@ -38,7 +37,7 @@ function loadClickedBlog(clickedBlog) {
     blog.appendChild(smallHeading);
 
     smallHeading.innerHTML = "Blog Posts:"
-    blogName.innerHTML = clickedBlog.name;
+    blogName.innerHTML = clickedBlog.name;  
 
 }
 
@@ -47,24 +46,24 @@ function loadBlogPosts(clickedBlog: Blog) {
 
     for (let i = 0; i < blogPosts.length; i++) {
         let nameFromBlog: string = blogPosts[i].blog;
-
+       
         if (nameFromBlog === nameFromBlogPost) {
             let smallHeading: HTMLHeadingElement = document.querySelector("h2");
             let blogPostTitle: HTMLParagraphElement = document.createElement("p");
-           
+            let blogPostContent: HTMLParagraphElement = document.createElement("p");
+
             blogPostTitle.classList.add("blogpost-title");
+            blogPostContent.classList.add("blogpost-content-hide");
+
             blogPostTitle.innerHTML = blogPosts[i].title;
-        
+            blogPostContent.innerHTML = blogPosts[i].content;
+            
             smallHeading.after(blogPostTitle);
-           
-        } else if (blogPosts[i].content === "") {
-            let smallHeading: HTMLHeadingElement = document.querySelector("h2");
-            let placeholder: HTMLParagraphElement = document.createElement("p");
-         
-            placeholder.innerHTML = "Nothing has been published here yet!";
+            blogPostTitle.after(blogPostContent);
 
-            smallHeading.after(placeholder);
-
+            blogPostTitle.addEventListener("click", () => {
+                blogPostContent.classList.toggle("blogpost-content");
+            });
         }
     }
 }
