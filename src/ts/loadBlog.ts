@@ -37,7 +37,7 @@ function loadClickedBlog(clickedBlog) {
     blog.appendChild(smallHeading);
 
     smallHeading.innerHTML = "Blog Posts:"
-    blogName.innerHTML = clickedBlog.name;  
+    blogName.innerHTML = clickedBlog.name;
 
 }
 
@@ -46,20 +46,25 @@ function loadBlogPosts(clickedBlog: Blog) {
 
     for (let i = 0; i < blogPosts.length; i++) {
         let nameFromBlog: string = blogPosts[i].blog;
-       
+
         if (nameFromBlog === nameFromBlogPost) {
             let smallHeading: HTMLHeadingElement = document.querySelector("h2");
+            let blogPost: HTMLDivElement = document.createElement("div");
             let blogPostTitle: HTMLParagraphElement = document.createElement("p");
             let blogPostContent: HTMLParagraphElement = document.createElement("p");
+            let plusIcon: HTMLSpanElement = document.createElement("span");
 
             blogPostTitle.classList.add("blogpost-title");
             blogPostContent.classList.add("blogpost-content-hide");
+            plusIcon.classList.add("add-icon");
 
             blogPostTitle.innerHTML = blogPosts[i].title;
             blogPostContent.innerHTML = blogPosts[i].content;
-            
-            smallHeading.after(blogPostTitle);
-            blogPostTitle.after(blogPostContent);
+
+            smallHeading.after(blogPost);
+            blogPost.appendChild(blogPostTitle);
+            blogPostTitle.prepend(plusIcon);
+            blogPost.appendChild(blogPostContent);
 
             blogPostTitle.addEventListener("click", () => {
                 blogPostContent.classList.toggle("blogpost-content");
