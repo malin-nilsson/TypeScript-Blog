@@ -53,7 +53,7 @@ function loadBlogPosts(clickedBlog: Blog) {
             let blogPostTitle: HTMLParagraphElement = document.createElement("p");
             let blogPostContent: HTMLParagraphElement = document.createElement("p");
             let plusIcon: HTMLSpanElement = document.createElement("span");
-
+            
             blogPostTitle.classList.add("blogpost-title");
             blogPostContent.classList.add("blogpost-content-hide");
             plusIcon.classList.add("add-icon");
@@ -68,6 +68,7 @@ function loadBlogPosts(clickedBlog: Blog) {
 
             blogPostTitle.addEventListener("click", () => {
                 blogPostContent.classList.toggle("blogpost-content");
+                plusIcon.classList.toggle("minimize-icon");
             });
         }
     }
