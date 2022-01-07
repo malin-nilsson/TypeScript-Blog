@@ -50,9 +50,11 @@ function createBlogPost() {
     let blogid: number = Math.floor(Math.random() * 1000);
     let blogName: HTMLSelectElement = document.getElementById("select-blog") as HTMLSelectElement;
     let blogNameValue = blogName.selectedOptions[0].value;
+    let date: Date = new Date();
+    let blogPostCreated: string = date.toLocaleDateString();
 
     if (titleValue && contentValue && blogNameValue) {
-        blogPosts.push(new BlogPost(titleValue, contentValue, blogid, blogNameValue));
+        blogPosts.push(new BlogPost(titleValue, contentValue, blogid, blogNameValue, blogPostCreated));
         localStorage.setItem("Blog posts", JSON.stringify(blogPosts));
         modal.style.display = "block";
         let closeModal: HTMLDivElement = document.querySelector(".close-wrapper");

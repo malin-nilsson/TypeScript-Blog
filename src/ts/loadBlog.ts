@@ -49,26 +49,38 @@ function loadBlogPosts(clickedBlog: Blog) {
 
         if (nameFromBlog === nameFromBlogPost) {
             let smallHeading: HTMLHeadingElement = document.querySelector("h2");
-            let blogPost: HTMLDivElement = document.createElement("div");
+            let blogPostContainer: HTMLDivElement = document.createElement("div");
+            let blogTitleDateContainer: HTMLDivElement = document.createElement("div");
+            let blogPostContentContainer: HTMLDivElement = document.createElement("div");
             let blogPostTitle: HTMLParagraphElement = document.createElement("p");
+            let blogPostDate: HTMLSpanElement = document.createElement("span");
             let blogPostContent: HTMLParagraphElement = document.createElement("p");
             let plusIcon: HTMLSpanElement = document.createElement("span");
-            
+     
+            blogPostTitle.innerHTML = blogPosts[i].title;
+            blogPostDate.innerHTML = "Date: " + blogPosts[i].date;
+            blogPostContent.innerHTML = blogPosts[i].content;
+
+            blogPostContainer.classList.add("blogpost-container");
+            blogTitleDateContainer.classList.add("blogtitledate-container");
+            blogPostContentContainer.classList.add("blogcontent-container");
             blogPostTitle.classList.add("blogpost-title");
+            blogPostDate.classList.add("blogpost-date");
             blogPostContent.classList.add("blogpost-content-hide");
             plusIcon.classList.add("add-icon");
 
-            blogPostTitle.innerHTML = blogPosts[i].title;
-            blogPostContent.innerHTML = blogPosts[i].content;
-
-            smallHeading.after(blogPost);
-            blogPost.appendChild(blogPostTitle);
+            smallHeading.after(blogPostContainer);
+            blogPostContainer.appendChild(blogTitleDateContainer);
+            blogTitleDateContainer.appendChild(blogPostTitle);
             blogPostTitle.prepend(plusIcon);
-            blogPost.appendChild(blogPostContent);
+            blogTitleDateContainer.appendChild(blogPostDate);
+            blogPostContainer.appendChild(blogPostContentContainer);
+            blogPostContentContainer.appendChild(blogPostContent);
 
-            blogPostTitle.addEventListener("click", () => {
+            blogPostContainer.addEventListener("click", () => {
                 blogPostContent.classList.toggle("blogpost-content");
                 plusIcon.classList.toggle("minimize-icon");
+    
             });
         }
     }

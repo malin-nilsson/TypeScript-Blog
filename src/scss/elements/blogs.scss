@@ -43,7 +43,7 @@
     border-radius: 10px;
     transition: background-color 0.3s;
     background-color: #fff;
-    
+
 
     &:hover {
         background-color: rgb(189, 189, 189, 0.4);
@@ -90,7 +90,7 @@
     }
 
     h1 {
-        font-size: 2.7rem;
+        font-size: 2.4rem;
         font-weight: 500;
         border-bottom: 2px solid rgb(16, 16, 16);
 
@@ -115,40 +115,70 @@
 
         }
     }
+}
 
-    .blogpost-title {
-        font-size: 1.5rem;
-        font-weight: 400;
+.blogpost-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    padding: 10px 0px;   
+
+    .blogtitledate-container {
+        display: flex;
+        justify-content: space-between;
         cursor: pointer;
-        border-bottom: 1px solid rgb(196, 196, 196);
+        flex-direction: column;
 
         &:hover {
             background-color: rgba(235, 235, 235, 0.4);
         }
 
-        @include mixins.desktop-only {
-            font-weight: 500;
-            font-size: 1.8rem;
-            padding: 10px 0px;
-           
+        @include mixins.tablet-only {
+            flex-direction: row;
         }
+
+        @include mixins.desktop-only {
+            flex-direction: row;
+        }
+    }
+
+    .blogcontent-container {
+        display: flex;
     }
 
     .blogpost-content-hide {
         display: none;
     }
-    
+
     .blogpost-content {
-    display: block;
+        display: block;
+        padding: 20px 0px;
+        font-size: 1.3rem;
 
         @include mixins.desktop-only {
-            font-size: 1.4rem;   
+            font-size: 1.4rem;
         }
     }
 
-    .close-wrapper {
-        display: none;
+    .blogpost-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: inline-block;
+        margin: 0;
+
+
+        @include mixins.desktop-only {
+            font-weight: 500;
+            font-size: 1.8rem;
+            display: inline-block;
+        }
     }
+
+    .blogpost-date {
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+
     .add-icon {
         background-image: url("../assets/plus.svg");
         background-position: center;
@@ -163,6 +193,10 @@
         background-size: cover;
         padding: 0px 20px 0px 0px;
         margin-right: 20px;
+        display: inline;
     }
-   
+}
+
+.close-wrapper {
+    display: none;
 }
