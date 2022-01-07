@@ -28,6 +28,19 @@ background-color: #fff;
     } 
 }
 
+.nav-item-underline {
+    text-decoration: underline;
+}
+
 .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
 }
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,0.9);
+
+    &:hover {
+        color: rgba(0,0,0,0.8);
+    }
+}
+
