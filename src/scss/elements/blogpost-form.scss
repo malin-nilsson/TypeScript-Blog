@@ -29,7 +29,6 @@
     }
 
     input {
-        margin: 5px 0px;
         border-radius: 5px;
         border: 1px solid grey;
         width: 100%;
@@ -77,6 +76,7 @@ label {
 
     @include mixins.desktop-only {
         font-size: 1.9rem;
+        margin: 8px 0px;
     }
 
 }
