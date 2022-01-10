@@ -1,7 +1,5 @@
 @use '../mixins';
 
-
-
 .blogs {
     width: 90%;
     margin: 0 auto;
@@ -64,13 +62,13 @@
 
 .blog-name {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 
 .author-name {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .blog-container {
@@ -95,7 +93,7 @@
         border-bottom: 2px solid rgb(16, 16, 16);
 
         @include mixins.desktop-only {
-            font-size: 4rem;
+            font-size: 3rem;
             margin: 0px 0px 10px;
             padding: 10px 0px;
         }
@@ -109,7 +107,7 @@
         font-style: oblique;
 
         @include mixins.desktop-only {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin: 40px 0px;
 
 
@@ -157,10 +155,10 @@
     .blogpost-content {
         display: block;
         padding: 20px 0px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
 
         @include mixins.desktop-only {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
     }
 
@@ -173,14 +171,14 @@
 
         @include mixins.desktop-only {
             font-weight: 500;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             display: inline-block;
         }
     }
 
     .blogpost-date {
         margin-right: 10px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .add-icon {
@@ -204,3 +202,4 @@
 .close-wrapper {
     display: none;
 }
+

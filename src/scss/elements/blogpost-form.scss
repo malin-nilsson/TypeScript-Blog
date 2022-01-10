@@ -42,7 +42,7 @@
         @include mixins.desktop-only {
             width: 100%;
             padding: 10px;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
     }
 
@@ -64,7 +64,7 @@
             padding: 10px;
             height: 18rem;
             width: 100%;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
 
         }
 
@@ -73,16 +73,21 @@
 
 label {
     display: block;
+    margin: 7px 0px;
+
+    @include mixins.tablet-only {
+        margin: 10px 0px;
+    }
 
     @include mixins.desktop-only {
-        font-size: 1.9rem;
-        margin: 8px 0px;
+        font-size: 1.2rem;
+        margin: 10px 0px;
     }
 
 }
 
 select {
-    padding: 7px 2px;
+    padding: 5px 2px;
     border-radius: 5px;
     background-color: #fff;
     border: 1px solid #000;
@@ -95,6 +100,7 @@ button {
     padding: 12px 20px;
     background-color: #000;
     color: #fff;
+    font-size: 1rem;
     font-weight: 500;
     border: 2px solid #000;
     transition: 0.2s;
