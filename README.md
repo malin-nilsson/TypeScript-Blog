@@ -3,7 +3,7 @@ A minimalistic blog CMS built with TypeScript and using local storage to save bl
 
 ### Screenshot
 
-![](src/assets/screenshot.jpg)
+![](assets/screenshot.jpg)
 
 ### Links
 
