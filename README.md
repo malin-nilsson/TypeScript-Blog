@@ -5,9 +5,8 @@ A minimalistic blog CMS built with TypeScript and using local storage to save bl
 
 ![](./src/assets/screenshot.jpg)
 
-### Links
+### Installation
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ### Built with
 
