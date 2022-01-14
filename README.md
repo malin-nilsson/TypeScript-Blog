@@ -1,11 +1,11 @@
 # Dot dot dot - Blog CMS
 A minimalistic blog CMS built with TypeScript and using local storage to save blog posts.
 
-### Screenshot
+## Screenshot
 ---
 ![](./src/assets/screenshot.jpg)
 
-### Installation
+## Installation
 ---
 1. Clone the repo\
 git clone https://github.com/malin-nilsson/blog-cms.git
@@ -18,7 +18,7 @@ npm run build
 
 Visit localhost:1234 to view the project
 
-### Built with
+## Built with
 ---
 - Semantic HTML5 markup
 - CSS
@@ -28,7 +28,7 @@ Visit localhost:1234 to view the project
 - Bootstrap
 - Mobile-first workflow
 
-### What I learned
+## What I learned
 ---
 
 ## Author
