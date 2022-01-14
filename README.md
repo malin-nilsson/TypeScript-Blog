@@ -33,6 +33,3 @@ Visit localhost:1234 to view the project
 ## Author
 
 - GitHub - [malin-nilsson](https://github.com/malin-nilsson)
-
-## Acknowledgments
-
