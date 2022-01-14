@@ -7,6 +7,16 @@ A minimalistic blog CMS built with TypeScript and using local storage to save bl
 
 ### Installation
 
+1. Clone the repo
+git clone https://github.com/malin-nilsson/blog-cms.git
+
+2. Install npm packages
+npm install
+
+3. Run Parcel
+npm run build
+
+Visit localhost:1234 to view the project
 
 ### Built with
 
