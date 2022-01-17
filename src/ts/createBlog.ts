@@ -8,15 +8,17 @@ import {
     Blog
 } from "./models/Blog";
 
+// Grab modal
 let modal: HTMLDivElement = document.getElementById("modal") as HTMLDivElement;
 
-
+// Hide modal when clicking somewhere in browser window
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
+// Create a new blog
 export function createBlog() {
     validateForms();
     let blogName: HTMLInputElement = document.getElementById("blog-name") as HTMLInputElement;
@@ -25,6 +27,8 @@ export function createBlog() {
     let authorValue = author.value;
     let id: number = Math.floor(Math.random() * 1000);
 
+    /* If blog name and author name is set, 
+    add to local storage */
     if (blogNameValue && authorValue) {
         blogList.push(new Blog(blogNameValue, id, authorValue));
         localStorage.setItem("Blogs", JSON.stringify(blogList));

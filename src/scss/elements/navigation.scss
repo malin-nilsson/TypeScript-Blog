@@ -1,14 +1,6 @@
 @use '../mixins';
 
-.navbar-dark .navbar-brand {
-    color: #F19372;
-
-
-        &:hover {
-            color: #F19372;
-        }
-
-}
+// Nav styling
 
 .navbar-brand {
     font-size: 1.8rem;
@@ -19,9 +11,17 @@
         font-size: 2rem;
         padding: 0px 30px;
     }
-
- 
 }
+
+.navbar-dark .navbar-brand {
+    color: #F19372;
+
+
+        &:hover {
+            color: #F19372;
+        }
+}
+
 
 .navbar-nav {
 padding: 20px 10px;

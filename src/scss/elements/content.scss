@@ -1,5 +1,7 @@
 @use '../mixins';
 
+// Wrapper on index.html
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -24,6 +26,8 @@
         padding: 20px 0px 20px;
     }
 
+    // Form styling
+    
     form {
         width: 90%;
 

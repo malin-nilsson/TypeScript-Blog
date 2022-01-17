@@ -1,3 +1,5 @@
+// Blog class
+
 export class Blog {
     name: string;
     id: number;

@@ -1,5 +1,6 @@
 @use '../mixins';
 
+// Container styling
 .new-post-container {
     padding: 30px 20px;
     display: flex;
@@ -12,7 +13,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 
     .new-post {
@@ -28,6 +28,8 @@
         }
     }
 
+    // Input, textarea, label & select styling
+    
     input {
         border-radius: 5px;
         background-color: #182F41;
@@ -97,6 +99,8 @@ select {
     color: #F19372;
 }
 
+// Button styling
+
 button {
     margin: 20px 0px;
     border-radius: 10px;
@@ -114,6 +118,8 @@ button {
         border: 2px solid #F19372;
     }
 }
+
+// Invalid feedback styling
 
 .invalid-feedback {
     color: #fff;

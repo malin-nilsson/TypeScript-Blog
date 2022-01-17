@@ -8,7 +8,11 @@ window.onload = function () {
 
 let blogs: HTMLDivElement = document.querySelector(".blogs");
 
+// Display all blogs
+
 function loadBlogs() {
+
+    // Loop through blogs in local storage and create HTML
     for (let i = 0; i < blogList.length; i++) {
 
         let blogContainer: HTMLDivElement = document.createElement("div");
@@ -20,7 +24,6 @@ function loadBlogs() {
         blogName.classList.add("blog-name");
         authorName.classList.add("author-name");
 
-     
         blogName.innerHTML = blogList[i].name;
         authorName.innerHTML = "Created by: " + blogList[i].author;
 

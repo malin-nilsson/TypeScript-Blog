@@ -15,14 +15,15 @@ import {
     BlogPost
 } from "./models/BlogPost";
 
+// Grab modal
 let modal: HTMLDivElement = document.getElementById("modal") as HTMLDivElement;
 
+// Hide modal when clicking somewhere in browser window
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-
 
 window.onload = function () {
     showBlogsInForm()
@@ -30,7 +31,7 @@ window.onload = function () {
     button.addEventListener("click", createBlogPost);
 }
 
-
+// Display all available blogs inside dropdown menu
 function showBlogsInForm() {
     let dropdown: HTMLSelectElement = document.getElementById("select-blog") as HTMLSelectElement;
     for (let i = 0; i < blogList.length; i++) {
@@ -41,6 +42,7 @@ function showBlogsInForm() {
     }
 }
 
+// Create a bog post
 function createBlogPost() {
     validateForms();
     let title: HTMLInputElement = document.getElementById("title") as HTMLInputElement;
@@ -53,6 +55,8 @@ function createBlogPost() {
     let date: Date = new Date();
     let blogPostCreated: string = date.toLocaleDateString();
 
+    /* If title, content and blog name has been added, 
+    save blog post in local storage*/
     if (titleValue && contentValue && blogNameValue) {
         blogPosts.push(new BlogPost(titleValue, contentValue, blogid, blogNameValue, blogPostCreated));
         localStorage.setItem("Blog posts", JSON.stringify(blogPosts));

@@ -9,16 +9,20 @@ import {
     BlogPost
 } from "./models/BlogPost";
 
+// Get the query portion of the current URL
 let url: string = window.location.search;
 let urlParams: URLSearchParams = new URLSearchParams(url);
 
+// Get the ID value from the query string
 for (let value of urlParams.values()) {
     let idfromURL: string = value;
 
-    // Look through the product catalog for the ID and compare it to ID in URL
+    /* Look for the ID in the blog array
+     and compare it to ID in the query string */
     for (let i: number = 0; i < blogList.length; i++) {
         let idFromObject: string = blogList[i].id.toString();
 
+        // If they match, load the blog and blog post
         if (idFromObject === idfromURL) {
             loadClickedBlog(blogList[i]);
             loadBlogPosts(blogList[i]);
@@ -26,6 +30,7 @@ for (let value of urlParams.values()) {
     }
 }
 
+// Display blog that was clicked
 function loadClickedBlog(clickedBlog) {
     let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
     let blog: HTMLDivElement = document.createElement("div");
@@ -41,6 +46,7 @@ function loadClickedBlog(clickedBlog) {
 
 }
 
+// Display blog posts from clicked blog
 function loadBlogPosts(clickedBlog: Blog) {
     let nameFromBlogPost: string = clickedBlog.name;
 
@@ -56,7 +62,7 @@ function loadBlogPosts(clickedBlog: Blog) {
             let blogPostDate: HTMLSpanElement = document.createElement("span");
             let blogPostContent: HTMLParagraphElement = document.createElement("p");
             let plusIcon: HTMLSpanElement = document.createElement("span");
-     
+
             blogPostTitle.innerHTML = blogPosts[i].title;
             blogPostDate.innerHTML = "Date: " + blogPosts[i].date;
             blogPostContent.innerHTML = blogPosts[i].content;
@@ -80,7 +86,6 @@ function loadBlogPosts(clickedBlog: Blog) {
             blogPostContainer.addEventListener("click", () => {
                 blogPostContent.classList.toggle("blogpost-content");
                 plusIcon.classList.toggle("minimize-icon");
-    
             });
         }
     }

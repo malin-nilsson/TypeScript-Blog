@@ -1,5 +1,7 @@
 @use '../mixins';
 
+// Container styling for blogs.html
+
 .blogs {
     width: 90%;
     margin: 0 auto;
@@ -60,16 +62,7 @@
 
 }
 
-.blog-name {
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-.author-name {
-    text-align: center;
-    font-size: 1rem;
-}
+// Container styling for blog.html
 
 .blog-container {
     width: 100%;
@@ -86,6 +79,8 @@
         margin: 0 auto;
         padding: 60px 0px;
     }
+
+    // Headings 
 
     h1 {
         font-size: 2.4rem;
@@ -115,6 +110,7 @@
     }
 }
 
+// Blog post styling
 .blogpost-container {
     display: flex;
     flex-direction: column;
@@ -201,5 +197,17 @@
 
 .close-wrapper {
     display: none;
+}
+
+
+.blog-name {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.author-name {
+    text-align: center;
+    font-size: 1rem;
 }
 

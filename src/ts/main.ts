@@ -18,6 +18,7 @@ import {
     validateForms 
 } from "./formValidation";
 
+// Get blogs and blogs posts from local storage
 export let blogList: Blog[] = JSON.parse(localStorage.getItem("Blogs")) || [];
 export let blogPosts: BlogPost[] = JSON.parse(localStorage.getItem("Blog posts")) || [];
 

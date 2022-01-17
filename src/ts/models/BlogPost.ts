@@ -2,6 +2,7 @@ import {
     Blog
 } from "./Blog";
 
+// Blog post class
 export class BlogPost {
     title: string;
     content: string;
