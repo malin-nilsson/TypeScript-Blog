@@ -1,6 +1,6 @@
 @use '../mixins';
 
-.navbar-light .navbar-brand {
+.navbar-dark .navbar-brand {
     color: #F19372;
 
 
@@ -50,6 +50,14 @@ background-color: #182F41;;
 }
 
 .navbar-light .navbar-nav .nav-link {
+    color: #F19372;
+
+    &:hover {
+        color: #F19372;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
     color: #F19372;
 
     &:hover {
