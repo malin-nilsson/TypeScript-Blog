@@ -17,7 +17,8 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 14pt;
     height: 100%;
-    background-color: rgb(254, 254, 254);
+    background-color: #182F41;
+    color:  #F19372;
 
     @include mixins.tablet-only {
       height: 100vh;

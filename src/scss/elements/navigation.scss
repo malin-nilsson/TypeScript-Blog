@@ -1,5 +1,14 @@
-
 @use '../mixins';
+
+.navbar-light .navbar-brand {
+    color: #F19372;
+
+
+        &:hover {
+            color: #F19372;
+        }
+
+}
 
 .navbar-brand {
     font-size: 1.8rem;
@@ -10,11 +19,13 @@
         font-size: 2rem;
         padding: 0px 30px;
     }
+
+ 
 }
 
 .navbar-nav {
 padding: 20px 10px;
-background-color: #fff;
+background-color: #182F41;;
 }
 
 .nav-item {
@@ -39,10 +50,10 @@ background-color: #fff;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0,0,0,0.9);
+    color: #F19372;
 
     &:hover {
-        color: rgba(0,0,0,0.8);
+        color: #F19372;
     }
 }
 

@@ -38,7 +38,9 @@
         input {
             display: block;
             width: 100%;
-            border: 1px solid rgb(58, 58, 58);
+            background-color: #182F41;
+            border: 2px solid #F19372;
+            color: #F19372;
             border-radius: 5px;
             padding: 5px;
             margin: 5px 0px;
@@ -62,19 +64,21 @@
 
     button {
         font-size: 1rem;
+        font-weight: 500;
         margin: 20px 0px;
         border: none;
         border-radius: 10px;
         padding: 12px 20px;
-        background-color: #000;
-        color: #fff;
+        background-color: #F19372;
+        color: #182F41;
         font-weight: 500;
-        border: 2px solid #000;
+        border: 2px solid #F19372;
         transition: 0.2s;
 
         &:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: #182F41;
+            border: 2px solid #F19372;
+            color: #F19372;
         }
     }
 }

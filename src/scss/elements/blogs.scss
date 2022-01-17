@@ -40,11 +40,11 @@
     padding: 50px 20px;
     border-radius: 10px;
     transition: background-color 0.3s;
-    background-color: #fff;
+    background-color: #26445b;
 
 
     &:hover {
-        background-color: rgb(189, 189, 189, 0.3);
+        background-color: #31516a;
         cursor: pointer;
     }
 
@@ -90,7 +90,7 @@
     h1 {
         font-size: 2.4rem;
         font-weight: 500;
-        border-bottom: 2px solid rgb(16, 16, 16);
+        border-bottom: 2px solid rgb(196, 196, 196);
 
         @include mixins.desktop-only {
             font-size: 3rem;
@@ -103,7 +103,7 @@
         font-size: 1.5rem;
         font-weight: 300;
         margin: 20px 0px 40px;
-        color: rgb(125, 125, 125);
+        color: #F19372;
         font-style: oblique;
 
         @include mixins.desktop-only {
@@ -118,7 +118,7 @@
 .blogpost-container {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgb(196, 196, 196);
+    border-bottom: 2px solid rgb(196, 196, 196);
     padding: 10px 0px;
 
     .blogtitledate-container {
@@ -129,7 +129,7 @@
         flex-direction: column;
 
         &:hover {
-            background-color: rgba(235, 235, 235, 0.4);
+            background-color: #31516a;
         }
 
         @include mixins.tablet-only {
