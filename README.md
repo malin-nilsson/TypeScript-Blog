@@ -1,5 +1,5 @@
 # Dot dot dot - Blog CMS
-A minimalistic blog CMS built with TypeScript and using local storage to save blog posts.
+A minimalist blog CMS built with TypeScript with features like creating a blog, viewing other blogs and writing posts.
 
 ## Screenshot
 ![](./src/assets/screenshot.jpg)
