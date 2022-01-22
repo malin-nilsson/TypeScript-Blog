@@ -26,6 +26,7 @@ Visit localhost:1234 to view the project
 - Mobile-first workflow
 
 ## What I learned
+During this project I got the opportunity to continue developing my TypeScript skills, as well as working with form validation and local storage.
 
 ## Author
 - GitHub - [malin-nilsson](https://github.com/malin-nilsson)
