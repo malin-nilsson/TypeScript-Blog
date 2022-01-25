@@ -1,7 +1,6 @@
 # Dot dot dot - Blog CMS
-A minimalist blog CMS built with TypeScript with features like creating a blog, viewing other blogs and writing posts.
+A minimalist blog CMS built with TypeScript with features like creating a blog, viewing other blogs and writing posts. During this project I got the opportunity to continue developing my TypeScript skills, as well as working with styling, form validation and local storage.
 
-## Screenshot
 ![](./src/assets/screenshot.jpg)
 
 ## Installation
@@ -24,9 +23,6 @@ Visit localhost:1234 to view the project
 - TypeScript
 - Bootstrap
 - Mobile-first workflow
-
-## What I learned
-During this project I got the opportunity to continue developing my TypeScript skills, as well as working with styling, form validation and local storage.
 
 ## Author
 - GitHub - [malin-nilsson](https://github.com/malin-nilsson)
