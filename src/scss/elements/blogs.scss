@@ -108,6 +108,10 @@
 
         }
     }
+
+    p {
+        margin: 0px 0px 50px;
+    }
 }
 
 // Blog post styling
@@ -220,28 +224,31 @@
     align-items: center;
 
 
-    .blog-button {
-        text-decoration: none;
-        text-align: center;
-        margin: 20px 0px;
-        border: none;
-        border-radius: 10px;
-        padding: 11px 17px;
-        background-color: #F19372;
-        color: #182F41;
-        border: 2px solid #F19372;
-        transition: 0.2s;
-        font-size: 1.1rem;
-        font-weight: 500;
-  
-        &:hover {
-          background-color: #182F41;
-          color: #F19372;
-          border: 2px solid #F19372;
-        }
+}
 
-        @include mixins.desktop-only {
-            font-size: 1.3rem;
-        }
+
+.blog-button {
+    text-decoration: none;
+    text-align: center;
+    margin: 20px 0px;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 17px;
+    background-color: #F19372;
+    color: #182F41;
+    border: 2px solid #F19372;
+    transition: 0.2s;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    &:hover {
+        background-color: #182F41;
+        color: #F19372;
+        border: 2px solid #F19372;
+    }
+
+    @include mixins.desktop-only {
+        font-size: 1.3rem;
+    }
 }
-}
+
