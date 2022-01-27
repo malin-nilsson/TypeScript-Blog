@@ -9,30 +9,34 @@ import {
     BlogPost
 } from "./models/BlogPost";
 
-// Get the query portion of the current URL
-let url: string = window.location.search;
-let urlParams: URLSearchParams = new URLSearchParams(url);
+// Get the query string
+let urlParams: URLSearchParams = new URLSearchParams(window.location.search);
 
-// Get the ID value from the query string
-for (let value of urlParams.values()) {
-    let idfromURL: string = value;
+// Look for the ID in the query string
+let idFromURL: string = urlParams.get("id");
 
-    /* Look for the ID in the blog array
-     and compare it to ID in the query string */
-    for (let i: number = 0; i < blogList.length; i++) {
-        let idFromObject: string = blogList[i].id.toString();
+/* If ID in query string matches blog ID,
+display blog and blog posts */
+blogList.forEach(blog => {
+    let idFromBlog: string = blog.id.toString();
 
-        // If they match, load the blog and blog post
-        if (idFromObject === idfromURL) {
-            loadClickedBlog(blogList[i]);
-            loadBlogPosts(blogList[i]);
-        }
+    if (idFromBlog === idFromURL) { 
+        loadClickedBlog(blog);
+            loadBlogPosts(blog);
     }
-}
+})
 
 // Display blog that was clicked
 function loadClickedBlog(clickedBlog) {
     let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
+
+    if (blogContainer.innerHTML === "") {
+        let placeholder = document.createElement("p");
+        placeholder.innerHTML = "Inget här!"
+        blogContainer.appendChild(placeholder);
+    } else {
+
+
     let blog: HTMLDivElement = document.createElement("div");
     let blogName: HTMLHeadingElement = document.createElement("h1");
     let smallHeading: HTMLHeadingElement = document.createElement("h2");
@@ -43,7 +47,7 @@ function loadClickedBlog(clickedBlog) {
 
     smallHeading.innerHTML = "Blog Posts:"
     blogName.innerHTML = clickedBlog.name;
-
+}
 }
 
 // Display blog posts from clicked blog
