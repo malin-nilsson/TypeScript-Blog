@@ -65,11 +65,13 @@ function loadBlogPosts(clickedBlog: Blog) {
             let blogPostTitle: HTMLParagraphElement = document.createElement("p");
             let blogPostDate: HTMLSpanElement = document.createElement("span");
             let blogPostContent: HTMLParagraphElement = document.createElement("p");
+            let deleteButton: HTMLButtonElement = document.createElement("button");
             let plusIcon: HTMLSpanElement = document.createElement("span");
 
             blogPostTitle.innerHTML = blogPosts[i].title;
             blogPostDate.innerHTML = "Date: " + blogPosts[i].date;
             blogPostContent.innerHTML = blogPosts[i].content;
+            deleteButton.innerHTML = "Delete post";
 
             blogPostContainer.classList.add("blogpost-container");
             blogTitleDateContainer.classList.add("blogtitledate-container");
@@ -86,11 +88,14 @@ function loadBlogPosts(clickedBlog: Blog) {
             blogTitleDateContainer.appendChild(blogPostDate);
             blogPostContainer.appendChild(blogPostContentContainer);
             blogPostContentContainer.appendChild(blogPostContent);
+            blogPostContent.appendChild(deleteButton)
 
             blogPostContainer.addEventListener("click", () => {
                 blogPostContent.classList.toggle("blogpost-content");
                 plusIcon.classList.toggle("minimize-icon");
             });
+
+           
         }
     }
 }

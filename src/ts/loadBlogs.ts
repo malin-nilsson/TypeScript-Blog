@@ -42,7 +42,7 @@ function loadBlogs() {
         let message = document.createElement("p");
         message.innerHTML = "It's empty here right now!";
         let button = document.createElement("a");
-        button.classList.add("start-blog-button")
+        button.classList.add("blog-button")
         button.innerHTML = "Start a blog"
         button.setAttribute("href", "index.html")
 
