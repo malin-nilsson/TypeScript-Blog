@@ -18,13 +18,11 @@ npm run build
 Visit localhost:1234 to view the project
 
 ## Built with
-- Semantic HTML5 markup
-- CSS
-- SASS
-- Flexbox
+- HTML & SASS
 - TypeScript
 - Bootstrap
-- Mobile-first workflow
+- Parcel
+- Cypress
 
 ## Author
 - GitHub - [malin-nilsson](https://github.com/malin-nilsson)
