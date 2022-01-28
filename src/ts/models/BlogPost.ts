@@ -24,5 +24,3 @@ export class BlogPost {
         this.date = date;
     }
 }
-
-export const BlogPosts: BlogPost[] = [];
