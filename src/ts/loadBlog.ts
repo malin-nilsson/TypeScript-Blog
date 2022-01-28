@@ -70,7 +70,7 @@ function loadBlogPosts(clickedBlog: Blog) {
             deleteButton.innerHTML = "Delete post";
 
             deleteButton.dataset.blogId = post.blogPostID.toString();
-
+            deleteButton.id = "delete-button";
             blogPostContainer.classList.add("blogpost-container");
             blogTitleDateContainer.classList.add("blogtitledate-container");
             blogPostContentContainer.classList.add("blogcontent-container");

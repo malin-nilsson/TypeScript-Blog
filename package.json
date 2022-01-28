@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/malin-nilsson/blog-cms#readme",
   "dependencies": {
-    "parcel": "^2.0.1"
+    "parcel": "^2.0.1",
+    "typescript": "^4.5.5"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
