@@ -1,4 +1,6 @@
-import { createBlog } from "./createBlog";
+import {
+    createBlog
+} from "./createBlog";
 import {
     blogList,
     blogPosts
@@ -23,7 +25,6 @@ blogList.forEach(blog => {
 
     if (idFromBlog === idFromURL) {
         loadClickedBlog(blog);
-
     }
 })
 
@@ -31,9 +32,7 @@ blogList.forEach(blog => {
 
 // Display blog that was clicked
 function loadClickedBlog(clickedBlog) {
-
     let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
-
     let blog: HTMLDivElement = document.createElement("div");
     let blogName: HTMLHeadingElement = document.createElement("h1");
     let smallHeading: HTMLHeadingElement = document.createElement("h2");
@@ -50,13 +49,11 @@ function loadClickedBlog(clickedBlog) {
 
 // Display blog posts from clicked blog
 function loadBlogPosts(clickedBlog: Blog) {
-    let nameFromBlogPost: string = clickedBlog.name;
+  
+    blogPosts.forEach(post => {
+        let blogPostId = parseInt(post.blog);
 
-    
-    for (let i = 0; i < blogPosts.length; i++) {
-        let nameFromBlog: string = blogPosts[i].blog;
-
-        if (nameFromBlog === nameFromBlogPost) {
+        if (blogPostId === clickedBlog.id) {
             let smallHeading: HTMLHeadingElement = document.querySelector("h2");
             let blogPostContainer: HTMLDivElement = document.createElement("div");
             let blogTitleDateContainer: HTMLDivElement = document.createElement("div");
@@ -67,12 +64,12 @@ function loadBlogPosts(clickedBlog: Blog) {
             let deleteButton: HTMLButtonElement = document.createElement("button");
             let plusIcon: HTMLSpanElement = document.createElement("span");
 
-            blogPostTitle.innerHTML = blogPosts[i].title;
-            blogPostDate.innerHTML = "Date: " + blogPosts[i].date;
-            blogPostContent.innerHTML = blogPosts[i].content;
+            blogPostTitle.innerHTML = post.title;
+            blogPostDate.innerHTML = "Date: " + post.date;
+            blogPostContent.innerHTML = post.content;
             deleteButton.innerHTML = "Delete post";
 
-            deleteButton.dataset.blogId = blogPosts[i].blogPostID.toString();
+            deleteButton.dataset.blogId = post.blogPostID.toString();
 
             blogPostContainer.classList.add("blogpost-container");
             blogTitleDateContainer.classList.add("blogtitledate-container");
@@ -102,20 +99,21 @@ function loadBlogPosts(clickedBlog: Blog) {
 
                 blogPosts.splice(index, 1)
                 localStorage.setItem('Blog posts', JSON.stringify(blogPosts));
+                location.reload();
 
             })
-        
-    } else {
-        let placeholder = document.createElement("p");
-        let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
-        let createBlogPostButton: HTMLAnchorElement = document.createElement("a");
 
-        createBlogPostButton.classList.add("blog-button");
-        createBlogPostButton.setAttribute("href", "newpost.html")
-        placeholder.innerHTML = "Thing are empty here!";
-        createBlogPostButton.innerHTML = "Create a new post"
-        blogContainer.appendChild(placeholder);
-        blogContainer.appendChild(createBlogPostButton);
-    }
-}
+        } else {
+            let placeholder = document.createElement("p");
+            let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
+            let createBlogPostButton: HTMLAnchorElement = document.createElement("a");
+
+            createBlogPostButton.classList.add("blog-button");
+            createBlogPostButton.setAttribute("href", "newpost.html")
+            placeholder.innerHTML = "Thing are empty here!";
+            createBlogPostButton.innerHTML = "Create a new post"
+            blogContainer.appendChild(placeholder);
+            blogContainer.appendChild(createBlogPostButton);
+        }
+    })
 }

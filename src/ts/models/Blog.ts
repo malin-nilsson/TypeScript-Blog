@@ -15,5 +15,3 @@ export class Blog {
       this.author = author;
     }
   }
-
-  export const Blogs: Blog[] = [];

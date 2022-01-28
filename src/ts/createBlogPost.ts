@@ -37,7 +37,7 @@ function showBlogsInForm() {
     for (let i = 0; i < blogList.length; i++) {
         let option: HTMLOptionElement = document.createElement("option");
         option.innerHTML = blogList[i].name;
-        option.setAttribute("value", blogList[i].name);
+        option.setAttribute("value", blogList[i].id.toString());
         dropdown.appendChild(option);
     }
 }
@@ -49,18 +49,19 @@ function createBlogPost() {
     let titleValue = title.value;
     let content: HTMLTextAreaElement = document.getElementById("content") as HTMLTextAreaElement;
     let contentValue = content.value;
-    let blogid: number = Math.floor(Math.random() * 1000);
+    let blogPostId: number = Math.floor(Math.random() * 1000);
     let blogName: HTMLSelectElement = document.getElementById("select-blog") as HTMLSelectElement;
-    let blogNameValue = blogName.selectedOptions[0].value;
+    let blogId = blogName.selectedOptions[0].value;
     let date: Date = new Date();
     let blogPostCreated: string = date.toLocaleDateString();
 
     /* If title, content and blog name has been added, 
     save blog post in local storage*/
-    if (titleValue && contentValue && blogNameValue) {
-        blogPosts.push(new BlogPost(titleValue, contentValue, blogid, blogNameValue, blogPostCreated));
+    if (titleValue && contentValue && blogId) {
+        blogPosts.push(new BlogPost(titleValue, contentValue, blogPostId, blogId, blogPostCreated));
         localStorage.setItem("Blog posts", JSON.stringify(blogPosts));
         modal.style.display = "block";
+
         let closeModal: HTMLDivElement = document.querySelector(".close-wrapper");
         closeModal.addEventListener("click", () => {
             modal.style.display = "none";
