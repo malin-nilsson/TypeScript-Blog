@@ -123,5 +123,8 @@ button {
 // Invalid feedback styling
 
 .invalid-feedback {
-    color: #fff;
+    color: rgb(255, 0, 0);
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 5px;
 }
