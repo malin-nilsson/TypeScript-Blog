@@ -50,7 +50,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         cy.visit("http://localhost:1234/pages/newpost.html");
         cy.get("#select-blog").select('My blog')
         cy.get("#title").type('My first blog post')
-        cy.get("#content").type('Stay tuned for masterpieaces here.')
+        cy.get("#content").type('Stay tuned for masterpieces here.')
         cy.get("#new-post").click();
         cy.visit("http://localhost:1234/pages/blogs.html");
 
