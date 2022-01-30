@@ -7,7 +7,7 @@ During this project I got the opportunity to continue developing my TypeScript s
 
 ## Installation
 1. Clone the repo\
-git clone https://github.com/malin-nilsson/blog-cms.git
+git clone https://github.com/malin-nilsson/blogcms.git
 
 2. Install npm packages\
 npm install
