@@ -7,13 +7,13 @@ During this project I got the opportunity to continue developing my TypeScript s
 
 ## Installation
 1. Clone the repo\
-git clone https://github.com/malin-nilsson/blogcms.git
+`git clone https://github.com/malin-nilsson/blogcms.git`
 
 2. Install npm packages\
-npm install
+`npm install`
 
 3. Run Parcel\
-npm run build
+`npm run build`
 
 Visit localhost:1234 to view the project
 
