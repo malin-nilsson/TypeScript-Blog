@@ -1,7 +1,7 @@
 # Dot dot dot - Blog CMS
 A minimalist blog CMS built with TypeScript with features like publishing a blog, viewing other blogs, as well as creating and deleting blog posts.
 
-During this project I got the opportunity to continue developing my TypeScript skills, as well as practicing test driven development with Cypress.
+During this project I got the opportunity to continue developing my TypeScript skills, as well as practicing testing with Cypress.
 
 ![](./src/assets/screenshot.jpg)
 
