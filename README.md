@@ -17,11 +17,11 @@ During this project I got the opportunity to continue developing my TypeScript s
 
 Visit localhost:1234 to view the project
 
-## Built with
+## Tools
 - HTML & SASS
 - TypeScript
 - Bootstrap
-- Parcel
+- NPM
 - Cypress
 
 ## Author
