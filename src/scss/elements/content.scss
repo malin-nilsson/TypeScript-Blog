@@ -43,12 +43,12 @@
             display: block;
             width: 100%;
             background-color: #182F41;
-            border: 2px solid #F19372;
+            border: none;
+            border-bottom: 1.5px solid #F19372;
             color: #F19372;
-            border-radius: 5px;
             padding: 5px;
-            margin: 5px 0px;
-
+            font-family: 'Poppins', sans-serif;
+ 
             &:focus {
                 outline: none;
             }
@@ -61,13 +61,21 @@
     }
 
     label {
+        font-family: 'Poppins', sans-serif;
+
         @include mixins.desktop-only {
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: 500;
         }
+    }
+
+    section {
+        margin: 30px 0px;
     }
 
     button {
         font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
         font-weight: 500;
         margin: 20px 0px;
         border: none;
@@ -79,6 +87,7 @@
         border: 2px solid #F19372;
         transition: 0.2s;
         display: block;
+        width: 100%;
 
         &:hover {
             background-color: #182F41;

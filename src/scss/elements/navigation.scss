@@ -2,8 +2,13 @@
 
 // Nav styling
 
+.navbar {
+    button {
+        width: unset;
+    }
+}
 .navbar-brand {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     padding: 0px 10px;
     font-weight: 700;
 
@@ -37,7 +42,7 @@ background-color: #182F41;;
 
     @include mixins.desktop-only {
         padding: 0px 10px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     } 
 }
 
