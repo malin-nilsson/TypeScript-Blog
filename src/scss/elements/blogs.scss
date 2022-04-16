@@ -80,12 +80,16 @@
         padding: 60px 0px;
     }
 
+    p {
+        font-family: 'Poppins', sans-serif;
+    }
+
     // Headings 
 
     h1 {
         font-size: 2.4rem;
         font-weight: 500;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid #F19372;
 
         @include mixins.desktop-only {
             font-size: 3rem;
@@ -99,7 +103,7 @@
         font-weight: 300;
         margin: 20px 0px 40px;
         color: #F19372;
-        font-style: oblique;
+        font-family: 'Poppins', sans-serif;
 
         @include mixins.desktop-only {
             font-size: 1.5rem;
@@ -118,7 +122,7 @@
 .blogpost-container {
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #F19372;
     padding: 10px 0px;
 
     .blogtitledate-container {
@@ -240,6 +244,8 @@
     transition: 0.2s;
     font-size: 1.1rem;
     font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
 
     &:hover {
         background-color: #182F41;

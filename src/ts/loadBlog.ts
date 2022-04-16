@@ -16,12 +16,12 @@ import {
 let urlParams: URLSearchParams = new URLSearchParams(window.location.search);
 
 // Look for the ID in the query string
-let idFromURL: string = urlParams.get("id");
+let idFromURL: String = urlParams.get("id");
 
 /* If ID in query string matches blog ID,
 display blog and blog posts */
 blogList.forEach(blog => {
-    let idFromBlog: string = blog.id.toString();
+    let idFromBlog: String = blog.id.toString();
 
     if (idFromBlog === idFromURL) {
         loadClickedBlog(blog);
@@ -35,13 +35,10 @@ function loadClickedBlog(clickedBlog) {
     let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
     let blog: HTMLDivElement = document.createElement("div");
     let blogName: HTMLHeadingElement = document.createElement("h1");
-    let smallHeading: HTMLHeadingElement = document.createElement("h2");
 
     blogContainer.appendChild(blog);
     blog.appendChild(blogName);
-    blog.appendChild(smallHeading);
 
-    smallHeading.innerHTML = "Blog Posts:"
     blogName.innerHTML = clickedBlog.name;
 
     loadBlogPosts(clickedBlog);
@@ -49,12 +46,12 @@ function loadClickedBlog(clickedBlog) {
 
 // Display blog posts from clicked blog
 function loadBlogPosts(clickedBlog: Blog) {
-  
+
     blogPosts.forEach(post => {
         let blogPostId = parseInt(post.blog);
 
         if (blogPostId === clickedBlog.id) {
-            let smallHeading: HTMLHeadingElement = document.querySelector("h2");
+            let blogName: HTMLHeadingElement = document.querySelector("h1");
             let blogPostContainer: HTMLDivElement = document.createElement("div");
             let blogTitleDateContainer: HTMLDivElement = document.createElement("div");
             let blogPostContentContainer: HTMLDivElement = document.createElement("div");
@@ -79,7 +76,7 @@ function loadBlogPosts(clickedBlog: Blog) {
             blogPostContent.classList.add("blogpost-content-hide");
             plusIcon.classList.add("add-icon");
 
-            smallHeading.after(blogPostContainer);
+            blogName.after(blogPostContainer);
             blogPostContainer.appendChild(blogTitleDateContainer);
             blogTitleDateContainer.appendChild(blogPostTitle);
             blogPostTitle.prepend(plusIcon);
@@ -103,17 +100,6 @@ function loadBlogPosts(clickedBlog: Blog) {
 
             })
 
-        } else {
-            let placeholder = document.createElement("p");
-            let blogContainer: HTMLDivElement = document.querySelector(".blog-container");
-            let createBlogPostButton: HTMLAnchorElement = document.createElement("a");
-
-            createBlogPostButton.classList.add("blog-button");
-            createBlogPostButton.setAttribute("href", "newpost.html")
-            placeholder.innerHTML = "Thing are empty here!";
-            createBlogPostButton.innerHTML = "Create a new post"
-            blogContainer.appendChild(placeholder);
-            blogContainer.appendChild(createBlogPostButton);
         }
     })
 }
