@@ -18,7 +18,7 @@
     @include mixins.desktop-only {
         width: 50%;
         margin: 0 auto;
-        padding: 60px 0px;
+        padding: 130px 0px 50px;
     }
 
     h1 {
@@ -54,7 +54,7 @@
             }
 
             @include mixins.desktop-only {
-                padding: 7px;
+                padding: 7px 0px;
                 font-size: 1.1rem;
             }
         }
